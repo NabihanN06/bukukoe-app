@@ -9,29 +9,23 @@
     <div class="flex flex-col gap-6">
         <!-- Header -->
         <div class="text-center">
-            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-text">Sign Up</h1>
-            <p class="mt-2 text-gray-600">Create an account to get started.</p>
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-black">Sign Up</h1>
+            <p class="mt-2 text-blue-500">Create an account to get started.</p>
         </div>
 
         <!-- Form Card -->
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+        <div class="bg-blue-100 rounded-lg shadow-md overflow-hidden border border-blue-200">
             <form action="{{ route('register') }}" method="POST" class="p-6">
                 @csrf
-                <div class="flex flex-col gap-5">
+                <div class="flex flex-col gap-4">
                     <!-- Name -->
                     <div class="flex flex-col gap-2">
-                        <label for="name" class="font-semibold text-text flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
-                            </svg>
-                            Name
-                            <span class="text-red-500">*</span>
-                        </label>
+                        <label for="name" class="font-semibold text-black">Name <span class="text-red-500">*</span></label>
                         <input 
                             type="text" 
                             name="name" 
                             id="name" 
-                            class="border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200" 
+                            class="border border-blue-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" 
                             placeholder="Enter your full name"
                             required
                         />
@@ -39,19 +33,12 @@
 
                     <!-- Email -->
                     <div class="flex flex-col gap-2">
-                        <label for="email" class="font-semibold text-text flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                            </svg>
-                            Email Address
-                            <span class="text-red-500">*</span>
-                        </label>
+                        <label for="email" class="font-semibold text-black">Email Address <span class="text-red-500">*</span></label>
                         <input 
                             type="email" 
                             name="email" 
                             id="email" 
-                            class="border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200" 
+                            class="border border-blue-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" 
                             placeholder="Enter your email address"
                             required
                         />
@@ -59,26 +46,20 @@
 
                     <!-- Password -->
                     <div class="flex flex-col gap-2">
-                        <label for="password" class="font-semibold text-text flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
-                            </svg>
-                            Password
-                            <span class="text-red-500">*</span>
-                        </label>
+                        <label for="password" class="font-semibold text-black">Password <span class="text-red-500">*</span></label>
                         <div class="relative">
                             <input 
                                 type="password" 
                                 name="password" 
                                 id="password" 
-                                class="border border-gray-300 rounded-lg p-3 w-full pr-10 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200" 
+                                class="border border-blue-300 rounded-lg p-3 w-full pr-10 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" 
                                 placeholder="Create a password"
                                 required
                             />
                             <button 
                                 type="button" 
                                 id="toggle-password" 
-                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-700"
                                 aria-label="Toggle password visibility"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -91,26 +72,20 @@
 
                     <!-- Confirm Password -->
                     <div class="flex flex-col gap-2">
-                        <label for="password_confirmation" class="font-semibold text-text flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                            </svg>
-                            Confirm Password
-                            <span class="text-red-500">*</span>
-                        </label>
+                        <label for="password_confirmation" class="font-semibold text-black">Confirm Password <span class="text-red-500">*</span></label>
                         <div class="relative">
                             <input 
                                 type="password" 
                                 name="password_confirmation" 
                                 id="password_confirmation" 
-                                class="border border-gray-300 rounded-lg p-3 w-full pr-10 focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200" 
+                                class="border border-blue-300 rounded-lg p-3 w-full pr-10 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200" 
                                 placeholder="Confirm your password"
                                 required
                             />
                             <button 
                                 type="button" 
                                 id="toggle-confirm-password" 
-                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-blue-500 hover:text-blue-700"
                                 aria-label="Toggle password visibility"
                             >
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -124,11 +99,8 @@
                     <!-- Submit Button -->
                     <button 
                         type="submit" 
-                        class="mt-2 px-6 py-3 bg-primary border-2 border-black text-text rounded-full font-medium hover:bg-opacity-90 transition-all duration-200 shadow-[0_4px_0_0_#000000] hover:shadow-[0_2px_0_0_#86c0ae] hover:translate-y-0.5 active:translate-y-1 active:shadow-none flex items-center justify-center gap-2"
+                        class="mt-2 px-6 py-3 bg-blue-500 text-white rounded-lg font-medium hover:bg-blue-600 transition-all duration-200"
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
-                        </svg>
                         Create Account
                     </button>
                 </div>
@@ -137,9 +109,9 @@
 
         <!-- Sign In Link -->
         <div class="text-center">
-            <p class="text-gray-600">
+            <p class="text-black">
                 Already have an account? 
-                <a href="{{ route('login') }}" class="text-primary hover:underline font-medium">Sign in</a>
+                <a href="{{ route('login') }}" class="text-blue-700 hover:underline font-medium">Sign in</a>
             </p>
         </div>
     </div>
@@ -194,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
             position: "right",
             stopOnFocus: true,
             style: {
-                background: "#EF4444",
-                border: "1px solid #DC2626",
+                background: "#3B82F6",
+                border: "1px solid #2563EB",
                 borderRadius: "8px",
                 boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
                 color: "white",
